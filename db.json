@@ -43,6 +43,72 @@
       "time": "09:00",
       "petsAllowed": false,
       "organizer": "Ada Lovelace"
+    },
+    {
+      "id": 3311002,
+      "category": "arts",
+      "title": "Mural Painting",
+      "description": "Brighten the neighborhood with a community mural.",
+      "location": "Color Town",
+      "date": "September 5, 2022",
+      "time": "13:00",
+      "petsAllowed": true,
+      "organizer": "Vince Vango"
+    },
+    {
+      "id": 7720145,
+      "category": "health",
+      "title": "Community Yoga",
+      "description": "Start the day with an outdoor yoga session.",
+      "location": "Zen Park",
+      "date": "October 2, 2022",
+      "time": "08:00",
+      "petsAllowed": false,
+      "organizer": "Sunny Dey"
+    },
+    {
+      "id": 5540982,
+      "category": "education",
+      "title": "Coding for Kids",
+      "description": "A hands-on intro to programming for children.",
+      "location": "Tech Hub",
+      "date": "November 12, 2022",
+      "time": "14:00",
+      "petsAllowed": false,
+      "organizer": "Grace Hooper"
+    },
+    {
+      "id": 9081234,
+      "category": "food",
+      "title": "Farmers Market",
+      "description": "Fresh local produce from nearby farms.",
+      "location": "Green Square",
+      "date": "December 3, 2022",
+      "time": "09:30",
+      "petsAllowed": true,
+      "organizer": "Basil Leaf"
+    },
+    {
+      "id": 6102876,
+      "category": "environment",
+      "title": "Tree Planting",
+      "description": "Help us plant a hundred trees on the hillside.",
+      "location": "Hillside",
+      "date": "January 15, 2023",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Forrest Green"
+    },
+    {
+      "id": 4459301,
+      "category": "music",
+      "title": "Open Mic Night",
+      "description": "Share your talent at the community open mic.",
+      "location": "Downtown Cafe",
+      "date": "February 20, 2023",
+      "time": "19:00",
+      "petsAllowed": false,
+      "organizer": "Mel Ody"
     }
   ]
 }
