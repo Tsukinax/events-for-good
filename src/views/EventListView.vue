@@ -43,6 +43,16 @@ watchEffect(() => {
 <template>
   <h1>Events For Good</h1>
 
+  <!-- §2.9 — links to set up the page size (stored as the ?size= query param) -->
+  <div class="page-size">
+    Events per page:
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 2 } }">2</RouterLink>
+    |
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 4 } }">4</RouterLink>
+    |
+    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 6 } }">6</RouterLink>
+  </div>
+
   <div class="events">
     <div v-for="event in events" :key="event.id">
       <EventCard :event="event" />
@@ -91,5 +101,17 @@ watchEffect(() => {
 
 #page-next {
   text-align: right;
+}
+.page-size {
+  margin-bottom: 16px;
+}
+.page-size a {
+  padding: 0 6px;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+}
+.page-size a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
