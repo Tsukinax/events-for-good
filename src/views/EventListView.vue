@@ -13,10 +13,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
-  // §2.9 — page size is configurable through the ?size= query param (default 2)
+  // §2.9 — page size is configurable through the ?size= query param (default 3 since §5.1)
   size: {
     type: Number,
-    default: 2,
+    default: 3,
   },
 })
 const page = computed(() => props.page)
@@ -28,7 +28,6 @@ const hasNextPage = computed(() => {
 })
 
 watchEffect(() => {
-  events.value = null
   EventService.getEvents(pageSize.value, page.value)
     .then((response) => {
       events.value = response.data
