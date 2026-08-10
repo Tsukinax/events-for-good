@@ -7,7 +7,10 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-detail-view', params: { id: event.id } }">
+  <RouterLink
+    class="no-underline text-gray-700"
+    :to="{ name: 'event-detail-view', params: { id: event.id } }"
+  >
     <div
       class="cursor-pointer border border-gray-600 p-[20px] w-[250px] mb-[18px] hover:scale-101 hover:shadow-sp"
     >
@@ -16,10 +19,3 @@ defineProps<{
     </div>
   </RouterLink>
 </template>
-
-<style scoped>
-.event-link {
-  text-decoration: none;
-  color: #2c3e50;
-}
-</style>

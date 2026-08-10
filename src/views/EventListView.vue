@@ -43,13 +43,28 @@ watchEffect(() => {
   <h1>Events For Good</h1>
 
   <!-- §2.9 — links to set up the page size (stored as the ?size= query param) -->
-  <div class="page-size">
+  <div class="mb-4">
     Events per page:
-    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 2 } }">2</RouterLink>
+    <RouterLink
+      class="px-1.5 font-bold no-underline text-gray-700"
+      exact-active-class="text-green-500"
+      :to="{ name: 'event-list-view', query: { page: 1, size: 2 } }"
+      >2</RouterLink
+    >
     |
-    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 4 } }">4</RouterLink>
+    <RouterLink
+      class="px-1.5 font-bold no-underline text-gray-700"
+      exact-active-class="text-green-500"
+      :to="{ name: 'event-list-view', query: { page: 1, size: 4 } }"
+      >4</RouterLink
+    >
     |
-    <RouterLink :to="{ name: 'event-list-view', query: { page: 1, size: 6 } }">6</RouterLink>
+    <RouterLink
+      class="px-1.5 font-bold no-underline text-gray-700"
+      exact-active-class="text-green-500"
+      :to="{ name: 'event-list-view', query: { page: 1, size: 6 } }"
+      >6</RouterLink
+    >
   </div>
 
   <div class="flex flex-col items-center">
@@ -58,9 +73,9 @@ watchEffect(() => {
       <EventDetail :event="event" />
     </div>
 
-    <div class="pagination">
+    <div class="flex w-[290px]">
       <RouterLink
-        id="page-prev"
+        class="flex-1 text-left no-underline text-gray-700"
         :to="{ name: 'event-list-view', query: { page: page - 1, size: pageSize } }"
         rel="prev"
         v-if="page != 1"
@@ -68,7 +83,7 @@ watchEffect(() => {
       >
 
       <RouterLink
-        id="page-next"
+        class="flex-1 text-right no-underline text-gray-700"
         :to="{ name: 'event-list-view', query: { page: page + 1, size: pageSize } }"
         rel="next"
         v-if="hasNextPage"
@@ -77,35 +92,3 @@ watchEffect(() => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.pagination {
-  display: flex;
-  width: 290px;
-}
-.pagination a {
-  flex: 1;
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-#page-prev {
-  text-align: left;
-}
-
-#page-next {
-  text-align: right;
-}
-.page-size {
-  margin-bottom: 16px;
-}
-.page-size a {
-  padding: 0 6px;
-  text-decoration: none;
-  color: #2c3e50;
-  font-weight: bold;
-}
-.page-size a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
